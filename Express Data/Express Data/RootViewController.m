@@ -3,16 +3,39 @@
 //  Express Data
 //
 //  Created by Sun Aung on 24/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Express Data. All rights reserved.
 //
 
 #import "RootViewController.h"
+
+#define NoOfSection 1;
+#define rowHeight  70.0f;
+#define NewsCenterRow 0
+#define ContactRow 1
+#define AboutUsRow 2
 
 @implementation RootViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CGRect frame = CGRectMake(0, 0, 400, 44);
+	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
+	label.backgroundColor = [UIColor clearColor];
+	label.font = [UIFont boldSystemFontOfSize:20.0];
+	label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+	label.textAlignment = UITextAlignmentCenter;
+	label.textColor = [UIColor orangeColor];
+	label.text = @"Express Data";
+	self.navigationItem.titleView = label;	
+	
+	self.view.backgroundColor = [UIColor clearColor];
+	
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+	self.navigationItem.backBarButtonItem = backButton;
+	[backButton release];	
+	
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -35,23 +58,34 @@
 	[super viewDidDisappear:animated];
 }
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
- */
+ 
 
-// Customize the number of sections in the table view.
+// set number of section for table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return NoOfSection;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 1;
+}
+
+// set row height for table cell
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return rowHeight;
+}
+
+//set cell color
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor colorWithRed:205 green:201 blue:201 alpha:0.2]];
 }
 
 // Customize the appearance of table view cells.

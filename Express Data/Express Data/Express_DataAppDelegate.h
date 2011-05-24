@@ -3,7 +3,7 @@
 //  Express Data
 //
 //  Created by Sun Aung on 24/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Express Data. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

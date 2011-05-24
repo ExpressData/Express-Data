@@ -3,7 +3,7 @@
 //  Express Data
 //
 //  Created by Sun Aung on 24/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Express Data. All rights reserved.
 //
 
 #import "Express_DataAppDelegate.h"
@@ -17,7 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    // add background image before tabel view	
+	UIView *backgroundView = [[UIView alloc] initWithFrame:self.window.frame];
+	backgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background1.png"]];
+	
+	[self.window addSubview:backgroundView];
+	[backgroundView release];
+
     // Add the navigation controller's view to the window and display.
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
