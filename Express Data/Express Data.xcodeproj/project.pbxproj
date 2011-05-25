@@ -19,6 +19,8 @@
 		A4807C96138B7903000B91B5 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = A4807C94138B7903000B91B5 /* background1.png */; };
 		A4807C97138B7903000B91B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A4807C95138B7903000B91B5 /* Default.png */; };
 		A4AE78DB138C92430044C792 /* mainMenuItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4AE78DA138C92430044C792 /* mainMenuItem.plist */; };
+		A4AE78E0138C983E0044C792 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AE78DE138C983E0044C792 /* AboutUsViewController.m */; };
+		A4AE78E1138C983E0044C792 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AE78DF138C983E0044C792 /* AboutUsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		A4807C94138B7903000B91B5 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		A4807C95138B7903000B91B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A4AE78DA138C92430044C792 /* mainMenuItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainMenuItem.plist; sourceTree = "<group>"; };
+		A4AE78DD138C983E0044C792 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		A4AE78DE138C983E0044C792 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		A4AE78DF138C983E0044C792 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 		A4807C79138B7819000B91B5 /* Express Data */ = {
 			isa = PBXGroup;
 			children = (
+				A4AE78DC138C97DF0044C792 /* About Us */,
 				A4807C93138B78E5000B91B5 /* images */,
 				A4807C82138B7819000B91B5 /* Express_DataAppDelegate.h */,
 				A4807C83138B7819000B91B5 /* Express_DataAppDelegate.m */,
@@ -124,6 +130,16 @@
 			children = (
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A4AE78DC138C97DF0044C792 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				A4AE78DD138C983E0044C792 /* AboutUsViewController.h */,
+				A4AE78DE138C983E0044C792 /* AboutUsViewController.m */,
+				A4AE78DF138C983E0044C792 /* AboutUsViewController.xib */,
+			);
+			name = "About Us";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +198,7 @@
 				A4807C96138B7903000B91B5 /* background1.png in Resources */,
 				A4807C97138B7903000B91B5 /* Default.png in Resources */,
 				A4AE78DB138C92430044C792 /* mainMenuItem.plist in Resources */,
+				A4AE78E1138C983E0044C792 /* AboutUsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +212,7 @@
 				A4807C81138B7819000B91B5 /* main.m in Sources */,
 				A4807C84138B7819000B91B5 /* Express_DataAppDelegate.m in Sources */,
 				A4807C8A138B7819000B91B5 /* RootViewController.m in Sources */,
+				A4AE78E0138C983E0044C792 /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

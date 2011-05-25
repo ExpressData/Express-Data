@@ -8,6 +8,7 @@
 
 
 #import "RootViewController.h"
+#import "AboutUsViewController.h"
 
 #define NoOfSection 1;
 #define rowHeight  70.0f;
@@ -27,6 +28,7 @@
     
     self.menuItem = [NSArray arrayWithContentsOfFile:menuItemPath];
 
+    // Change the color and size of the Navigation Bar Title
     CGRect frame = CGRectMake(0, 0, 400, 44);
 	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
 	label.backgroundColor = [UIColor clearColor];
@@ -39,6 +41,7 @@
 	
 	self.view.backgroundColor = [UIColor clearColor];
 	
+    // set back button for navigation Item
 	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 	self.navigationItem.backBarButtonItem = backButton;
 	[backButton release];	
@@ -160,13 +163,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+
+    switch (indexPath.row) {
+        case AboutUsRow:
+        {
+            AboutUsViewController *aboutUsViewController = [[AboutUsViewController alloc] initWithNibName:@"AboutUsViewController" bundle:nil];
+            [self.navigationController pushViewController:aboutUsViewController animated:YES];
+            [aboutUsViewController release];            
+            break;
+        }   
+        default:
+            break;
+    }
+
+	
 }
 
 - (void)didReceiveMemoryWarning
