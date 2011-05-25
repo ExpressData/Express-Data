@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RootViewController : UITableViewController {
-
+    NSArray *menuItem;
 }
 
-
+@property (nonatomic, retain) NSArray *menuItem;
 @end

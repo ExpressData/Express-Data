@@ -18,6 +18,7 @@
 		A4807C8D138B7819000B91B5 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4807C8B138B7819000B91B5 /* RootViewController.xib */; };
 		A4807C96138B7903000B91B5 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = A4807C94138B7903000B91B5 /* background1.png */; };
 		A4807C97138B7903000B91B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A4807C95138B7903000B91B5 /* Default.png */; };
+		A4AE78DB138C92430044C792 /* mainMenuItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4AE78DA138C92430044C792 /* mainMenuItem.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A4807C8C138B7819000B91B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		A4807C94138B7903000B91B5 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		A4807C95138B7903000B91B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A4AE78DA138C92430044C792 /* mainMenuItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainMenuItem.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A4807C79138B7819000B91B5 /* Express Data */,
+				A4AE78D7138C85D50044C792 /* Resources */,
 				A4807C72138B7818000B91B5 /* Frameworks */,
 				A4807C70138B7818000B91B5 /* Products */,
 			);
@@ -98,6 +101,7 @@
 		A4807C7A138B7819000B91B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A4AE78DA138C92430044C792 /* mainMenuItem.plist */,
 				A4807C7B138B7819000B91B5 /* Express Data-Info.plist */,
 				A4807C7C138B7819000B91B5 /* InfoPlist.strings */,
 				A4807C7F138B7819000B91B5 /* Express Data-Prefix.pch */,
@@ -113,6 +117,13 @@
 				A4807C95138B7903000B91B5 /* Default.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		A4AE78D7138C85D50044C792 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,9 @@
 /* Begin PBXProject section */
 		A4807C66138B7818000B91B5 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Express Data";
+			};
 			buildConfigurationList = A4807C69138B7818000B91B5 /* Build configuration list for PBXProject "Express Data" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -167,6 +181,7 @@
 				A4807C8D138B7819000B91B5 /* RootViewController.xib in Resources */,
 				A4807C96138B7903000B91B5 /* background1.png in Resources */,
 				A4807C97138B7903000B91B5 /* Default.png in Resources */,
+				A4AE78DB138C92430044C792 /* mainMenuItem.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +307,7 @@
 				A4807C92138B7819000B91B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

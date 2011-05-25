@@ -6,6 +6,7 @@
 //  Copyright 2011 Express Data. All rights reserved.
 //
 
+
 #import "RootViewController.h"
 
 #define NoOfSection 1;
@@ -15,11 +16,17 @@
 #define AboutUsRow 2
 
 @implementation RootViewController
+@synthesize menuItem;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    // Load the data.
+    NSString *menuItemPath = [[NSBundle mainBundle] pathForResource:@"mainMenuItem" ofType:@"plist"];
+    
+    self.menuItem = [NSArray arrayWithContentsOfFile:menuItemPath];
+
     CGRect frame = CGRectMake(0, 0, 400, 44);
 	UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
 	label.backgroundColor = [UIColor clearColor];
@@ -36,6 +43,7 @@
 	self.navigationItem.backBarButtonItem = backButton;
 	[backButton release];	
 	
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -74,7 +82,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.menuItem count];
 }
 
 // set row height for table cell
@@ -98,7 +106,14 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    // Configure the cell.
+    
+    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+
+    NSDictionary *dataItem = [menuItem objectAtIndex:indexPath.row];
+    [cell.textLabel setText:[dataItem objectForKey:@"Name"]];
+    [cell.textLabel setTextColor:[UIColor whiteColor]];
+    [cell.textLabel setBackgroundColor:[UIColor clearColor]];
+
     return cell;
 }
 
@@ -165,6 +180,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.menuItem = nil;
 
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
@@ -173,6 +189,7 @@
 - (void)dealloc
 {
     [super dealloc];
+    [menuItem release];
 }
 
 @end
