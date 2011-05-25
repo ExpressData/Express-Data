@@ -13,12 +13,14 @@
     
     IBOutlet UIViewController *aboutED;
     IBOutlet UIViewController *history;
+   
     IBOutlet UITabBar *tabBar;
     
 }
 
 @property(nonatomic, retain) IBOutlet UIViewController *aboutED;
 @property(nonatomic, retain) IBOutlet UIViewController *history;
+@property (nonatomic, retain) IBOutlet UITabBar *tabBar;
 
-
+-(void) clearView;
 @end
