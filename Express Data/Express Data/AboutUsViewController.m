@@ -47,7 +47,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    NSLog(@"About Us Page");
     [self setTitle:@"About Us"];
     
     [self.tabBar setDelegate:self];
